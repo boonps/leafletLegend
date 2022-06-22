@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Leaflet HTML Legend</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="dist/L.Control.HtmlLegend.css" />
+  </head>
+  <body>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="dist/L.Control.HtmlLegend.js"></script>
+    <div
+      id="map"
+      style="position: absolute; top: 0; left: 0; bottom: 0; right: 0"
+    ></div>
+
+    <script>
+      var map = L.map("map").setView([39.73, -104.99], 8);
+
+      L.tileLayer(
+        "//stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png",
+        {
+          attribution:
+            'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+          subdomains: "abcd",
+          maxZoom: 10,
+          minZoom: 2,
+        }
+      ).addTo(map);
+
+      var layer4 = L.marker([39.61, -105.02]).addTo(map);
+
+      var layer5 = L.marker([39.74, -104.99]).addTo(map);
+
+      var layer6 = L.marker([39.73, -104.8]).addTo(map);
+
+      var layer7 = L.marker([39.77, -105.23]).addTo(map);
+
+      var layer8 = L.marker([39.87, -105.23]).addTo(map);
+
+      var layer9 = L.marker([39.97, -105.23]).addTo(map);
+
+      var layer10 = L.marker([39.107, -105.23]).addTo(map);
+
+      var layer11 = L.marker([39.117, -105.23]).addTo(map);
+
+      var layer12 = L.marker([39.127, -105.23]).addTo(map);
+
+      var overlays = {
+        "Layer 4": layer4,
+        "Layer 5": layer5,
+        "Layer 6": layer6,
+        "Layer 7": layer7,
+        "Layer 8": layer8,
+        "Layer 9": layer9,
+        "Layer 10": layer10,
+        "Layer 11": layer11,
+        "Layer 12": layer12,
+      };
+
+      L.control.layers(null, overlays, { collapsed: true }).addTo(map);
+
+      var htmlLegend4 = L.control.htmllegend({
+        position: "bottomright",
+        legends: [
+          {
+            name: "Layer 4",
+            layer: layer4,
+            elements: [
+              {
+                html: '<div class="img"><img src="imgs.png"></div>',
+              },
+            ],
+          },
+        ],
+        defaultOpacity: 0.8,
+        collapseSimple: true,
+        detectStretched: true,
+        visibleIcon: "icon icon-eye",
+        hiddenIcon: "icon icon-eye-slash",
+      });
+
+      map.addControl(htmlLegend4);
+
+      var htmlLegend5 = L.control.htmllegend({
+        position: "bottomright",
+        legends: [
+          {
+            name: "Layer 5",
+            layer: layer5,
+            elements: [
+              {
+                label: "Hexagon",
+                html: '<div class="img"><img src="imgs.png"></div>',
+              },
+            ],
+          },
+        ],
+        defaultOpacity: 0.8,
+        collapseSimple: true,
+        detectStretched: true,
+        visibleIcon: "icon icon-eye",
+        hiddenIcon: "icon icon-eye-slash",
+      });
+
+      map.addControl(htmlLegend5);
+
+      var htmlLegend6 = L.control.htmllegend({
+        position: "bottomright",
+        legends: [
+          {
+            name: "Layer 6",
+            layer: layer6,
+            elements: [
+              {
+                label: "Hexagon",
+                html: '<div class="img"><img src="http://www4.cgistln.nu.ac.th/geoserver/map_portal/wms?REQUEST=GetLegendGraphic&VERSION=1.1.0&FORMAT=image/png&LAYER=map_portal:distric" alt="legend"></div>',
+              },
+            ],
+          },
+        ],
+        defaultOpacity: 0.8,
+        collapseSimple: true,
+        detectStretched: true,
+        visibleIcon: "icon icon-eye",
+        hiddenIcon: "icon icon-eye-slash",
+      });
+
+      map.addControl(htmlLegend6);
+
+      var htmlLegend7 = L.control.htmllegend({
+        position: "bottomright",
+        legends: [
+          {
+            name: "Layer 7",
+            layer: layer7,
+            elements: [
+              {
+                label: "Hexagon",
+                html: '<div class="img"><img src="http://www4.cgistln.nu.ac.th/geoserver/map_portal/wms?REQUEST=GetLegendGraphic&VERSION=1.1.0&FORMAT=image/png&LAYER=map_portal:distric" alt="legend"></div>',
+              },
+            ],
+          },
+        ],
+        defaultOpacity: 0.8,
+        collapseSimple: true,
+        detectStretched: true,
+        visibleIcon: "icon icon-eye",
+        hiddenIcon: "icon icon-eye-slash",
+      });
+
+      map.addControl(htmlLegend7);
+
+      var htmlLegend8 = L.control.htmllegend({
+        position: "bottomright",
+        legends: [
+          {
+            name: "Layer 7",
+            layer: layer7,
+            elements: [
+              {
+                label: "Hexagon",
+                html: '<div class="img"><img src="http://www4.cgistln.nu.ac.th/geoserver/map_portal/wms?REQUEST=GetLegendGraphic&VERSION=1.1.0&FORMAT=image/png&LAYER=map_portal:distric" alt="legend"></div>',
+              },
+            ],
+          },
+        ],
+        defaultOpacity: 0.8,
+        collapseSimple: true,
+        detectStretched: true,
+        visibleIcon: "icon icon-eye",
+        hiddenIcon: "icon icon-eye-slash",
+      });
+
+      map.addControl(htmlLegend8);
+
+      var htmlLegend9 = L.control.htmllegend({
+        position: "bottomright",
+        legends: [
+          {
+            name: "Layer 7",
+            layer: layer7,
+            elements: [
+              {
+                label: "Hexagon",
+                html: '<div class="img"><img src="http://www4.cgistln.nu.ac.th/geoserver/map_portal/wms?REQUEST=GetLegendGraphic&VERSION=1.1.0&FORMAT=image/png&LAYER=map_portal:distric" alt="legend"></div>',
+              },
+            ],
+          },
+        ],
+        defaultOpacity: 0.8,
+        collapseSimple: true,
+        detectStretched: true,
+        visibleIcon: "icon icon-eye",
+        hiddenIcon: "icon icon-eye-slash",
+      });
+
+      map.addControl(htmlLegend9);
+
+      var htmlLegend10 = L.control.htmllegend({
+        position: "bottomright",
+        legends: [
+          {
+            name: "Layer 7",
+            layer: layer7,
+            elements: [
+              {
+                label: "Hexagon",
+                html: '<div class="img"><img src="http://www4.cgistln.nu.ac.th/geoserver/map_portal/wms?REQUEST=GetLegendGraphic&VERSION=1.1.0&FORMAT=image/png&LAYER=map_portal:distric" alt="legend"></div>',
+              },
+            ],
+          },
+        ],
+        defaultOpacity: 0.8,
+        collapseSimple: true,
+        detectStretched: true,
+        visibleIcon: "icon icon-eye",
+        hiddenIcon: "icon icon-eye-slash",
+      });
+
+      map.addControl(htmlLegend10);
+
+      var htmlLegend11 = L.control.htmllegend({
+        position: "bottomright",
+        legends: [
+          {
+            name: "Layer 7",
+            layer: layer7,
+            elements: [
+              {
+                label: "Hexagon",
+                html: '<div class="img"><img src="http://www4.cgistln.nu.ac.th/geoserver/map_portal/wms?REQUEST=GetLegendGraphic&VERSION=1.1.0&FORMAT=image/png&LAYER=map_portal:distric" alt="legend"></div>',
+              },
+            ],
+          },
+        ],
+        defaultOpacity: 0.8,
+        collapseSimple: true,
+        detectStretched: true,
+        visibleIcon: "icon icon-eye",
+        hiddenIcon: "icon icon-eye-slash",
+      });
+
+      map.addControl(htmlLegend11);
+
+      var htmlLegend12 = L.control.htmllegend({
+        position: "bottomright",
+        legends: [
+          {
+            name: "Layer 7",
+            layer: layer7,
+            elements: [
+              {
+                label: "Hexagon",
+                html: '<div class="img"><img src="http://www4.cgistln.nu.ac.th/geoserver/map_portal/wms?REQUEST=GetLegendGraphic&VERSION=1.1.0&FORMAT=image/png&LAYER=map_portal:distric" alt="legend"></div>',
+              },
+            ],
+          },
+        ],
+        defaultOpacity: 0.8,
+        collapseSimple: true,
+        detectStretched: true,
+        visibleIcon: "icon icon-eye",
+        hiddenIcon: "icon icon-eye-slash",
+      });
+
+      map.addControl(htmlLegend12);
+    </script>
+  </body>
+</html>
